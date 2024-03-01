@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
         android:layout_gravity="bottom"
-        android:background="@drawable/intro_get_start_bg"
+        android:background="@drawable/intro_get_start_bg_orange"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
