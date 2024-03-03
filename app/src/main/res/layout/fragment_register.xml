@@ -31,7 +31,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_100sdp"
         android:background="@drawable/login_screen_bg"
         android:orientation="vertical">
 
@@ -68,7 +68,7 @@
             android:fontFamily="@font/poppins_light"
             android:gravity="center"
             android:hint="Last Name"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:textColor="@color/black" />
 
         <EditText
@@ -80,8 +80,9 @@
             android:background="@drawable/edit_text_bg"
             android:fontFamily="@font/poppins_light"
             android:gravity="center"
+            android:padding="@dimen/_5sdp"
             android:hint="Email"
-            android:inputType="textPassword"
+            android:inputType="textEmailAddress"
             android:textColor="@color/black" />
 
         <EditText
@@ -106,32 +107,16 @@
             android:text="Remember me"
             android:textColor="@color/black" />
 
-        <LinearLayout
-            android:id="@+id/sign_up"
-            android:layout_width="@dimen/_250sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_gravity="center"
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/signup"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/_20sdp"
+            app:spinning_bar_color="@color/white"
             android:layout_marginBottom="28dp"
-            android:background="@drawable/intro_start_bg_white"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:fontFamily="@font/sf_pro_display"
-                android:gravity="center"
-                android:text="Sign up"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
+            android:background="@drawable/intro_start_bg_black"
+            android:text="create account"
+            android:textColor="@color/white" />
     </LinearLayout>
 </LinearLayout>

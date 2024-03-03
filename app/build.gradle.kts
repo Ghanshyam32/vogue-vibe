@@ -5,11 +5,15 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
     id("dagger.hilt.android.plugin")
     id("org.jetbrains.kotlin.kapt") version "1.5.21"
+    id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.ghanshyam.voguevibe"
     compileSdk = 34
+    buildFeatures {
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId = "com.ghanshyam.voguevibe"
@@ -58,6 +62,8 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.48")
     kapt("com.google.dagger:hilt-android-compiler:2.48")
 
-    implementation ("com.intuit.ssp:ssp-android:1.1.0")
-    implementation ("com.intuit.sdp:sdp-android:1.1.0")
+    implementation("com.intuit.ssp:ssp-android:1.1.0")
+    implementation("com.intuit.sdp:sdp-android:1.1.0")
+
+    implementation("com.google.firebase:firebase-auth:22.3.1")
 }
