@@ -11,11 +11,14 @@ import androidx.lifecycle.lifecycleScope
 import com.ghanshyam.voguevibe.R
 import com.ghanshyam.voguevibe.data.User
 import com.ghanshyam.voguevibe.databinding.FragmentRegisterBinding
+import com.ghanshyam.voguevibe.util.RegisterValidation
 import com.ghanshyam.voguevibe.util.Resource
 import com.ghanshyam.voguevibe.viewmodel.Register
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.WithFragmentBindings
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.withContext
 
 private val TAG = "RegisterFragment"
 
@@ -64,11 +67,31 @@ class RegisterFragment : Fragment() {
                         Log.e(TAG, it.message.toString())
                         bindings.signup.revertAnimation()
                     }
+
                     else ->
                         Unit
                 }
             }
         }
-
+        lifecycleScope.launchWhenStarted {
+            viewModel.validation.collect { validation ->
+                if (validation.email is RegisterValidation.Failed) {
+                    withContext(Dispatchers.Main) {
+                        bindings.inputEmail.apply {
+                            requestFocus()
+                            error = validation.email.message
+                        }
+                    }
+                }
+                if (validation.password is RegisterValidation.Failed) {
+                    withContext(Dispatchers.Main) {
+                        bindings.inputPassword.apply {
+                            requestFocus()
+                            error = validation.password.message
+                        }
+                    }
+                }
+            }
+        }
     }
 }

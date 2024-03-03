@@ -50,6 +50,7 @@
             android:layout_width="350dp"
             android:layout_height="@dimen/_45sdp"
             android:layout_gravity="center"
+            android:padding="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_18sdp"
             android:background="@drawable/edit_text_bg"
             android:fontFamily="@font/poppins_light"
@@ -63,6 +64,7 @@
             android:layout_width="350dp"
             android:layout_height="@dimen/_45sdp"
             android:layout_gravity="center"
+            android:padding="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_25sdp"
             android:background="@drawable/edit_text_bg"
             android:fontFamily="@font/poppins_light"
@@ -88,6 +90,7 @@
             android:layout_marginStart="@dimen/_20sdp"
             android:fontFamily="@font/sf_pro_display"
             android:text="Remember me"
+            android:buttonTintMode="@color/black"
             android:textColor="@color/black" />
 
         <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
@@ -96,11 +99,11 @@
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/_20sdp"
-            app:spinning_bar_color="@color/white"
             android:layout_marginBottom="28dp"
             android:background="@drawable/intro_start_bg_black"
             android:text="Log in"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            app:spinning_bar_color="@color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"
