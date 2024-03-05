@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.ghanshyam.voguevibe.R
 import com.ghanshyam.voguevibe.data.User
 import com.ghanshyam.voguevibe.databinding.FragmentRegisterBinding
@@ -38,6 +39,10 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        bindings.alreadyHaveAcc.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+        }
 
         bindings.apply {
             signup.setOnClickListener {

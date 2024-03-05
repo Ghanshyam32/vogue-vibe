@@ -8,6 +8,7 @@
     android:padding="@dimen/_20sdp">
 
     <LinearLayout
+        android:id="@+id/discover"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
         android:layout_gravity="bottom"
