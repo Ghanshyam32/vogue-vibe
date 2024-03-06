@@ -65,7 +65,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                     }
 
                     is Resource.Success -> {
-                        Snackbar.make(
+                       Snackbar.make(
                             requireView(),
                             "Reset link was sent to your email",
                             Snackbar.LENGTH_SHORT
