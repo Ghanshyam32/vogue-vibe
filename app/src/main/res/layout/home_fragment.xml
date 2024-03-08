@@ -69,30 +69,31 @@
             android:src="@drawable/icon_mic"
             app:tint="#919394" />
     </LinearLayout>
-̥
+    ̥
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        app:tabIndicator="@null"
-        app:tabTextColor="#424242"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/homeHeader"
+        app:tabIndicator="@null"
         app:tabMode="scrollable"
         app:tabRippleColor="#D3D3D3"
         app:tabSelectedTextColor="#02408C"
-        app:tabTextAppearance="@style/tabLayout_text" />
+        app:tabTextAppearance="@style/tabLayout_text"
+        app:tabTextColor="#424242" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
