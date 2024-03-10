@@ -43,11 +43,11 @@
             android:text="$2000"
             android:textColor="@color/g_hint"
             android:textSize="@dimen/_12ssp"
-            app:layout_constraintStart_toEndOf="@id/tv_new_price"
+            app:layout_constraintStart_toEndOf="@id/special_product_price"
             app:layout_constraintTop_toBottomOf="@id/tv_deal_product_name" />
 
         <TextView
-            android:id="@+id/tv_new_price"
+            android:id="@+id/special_product_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sf_pro_display"

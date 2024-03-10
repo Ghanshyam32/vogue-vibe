@@ -69,7 +69,7 @@
             android:src="@drawable/icon_mic"
             app:tint="#919394" />
     </LinearLayout>
-    ̥
+
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"

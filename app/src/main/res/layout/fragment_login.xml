@@ -81,9 +81,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_25sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:fontFamily="@font/sf_pro_display"
+            android:fontFamily="@font/poppins_thin"
             android:text="Forgot Password?"
-            android:textColor="#5B5C5B" />
+            android:textColor="#001757" />
 
 
         <CheckBox
@@ -144,7 +144,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/icon_google" />
+                android:src="@drawable/icon_google"/>
 
         </LinearLayout>
     </LinearLayout>

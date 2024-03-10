@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/img"
+            android:id="@+id/special_product_item"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_marginStart="16dp"
@@ -24,21 +24,22 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/product_title"
+            android:id="@+id/special_product_title"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="7dp"
             android:fontFamily="@font/poppins_thin"
+            android:maxLines="2"
             android:text="White Textured Shoes"
             android:textColor="@color/black"
             android:textSize="17sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/img"
-            app:layout_constraintTop_toTopOf="@id/img" />
+            app:layout_constraintStart_toEndOf="@id/special_product_item"
+            app:layout_constraintTop_toTopOf="@id/special_product_item" />
 
         <TextView
-            android:id="@+id/tv_new_price"
+            android:id="@+id/special_product_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="124dp"
@@ -50,7 +51,7 @@
             android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/product_title"
+            app:layout_constraintTop_toBottomOf="@id/special_product_title"
             app:layout_constraintVertical_bias="0.051" />
 
         <ImageView
@@ -62,7 +63,7 @@
             android:src="@drawable/round_favorite_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.6"
-            app:layout_constraintStart_toEndOf="@+id/product_title"
+            app:layout_constraintStart_toEndOf="@+id/special_product_title"
             app:layout_constraintTop_toTopOf="parent"
             app:tint="#D50000" />
 

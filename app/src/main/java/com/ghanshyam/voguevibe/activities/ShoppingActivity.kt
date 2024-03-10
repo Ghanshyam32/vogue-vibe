@@ -6,7 +6,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.ghanshyam.voguevibe.R
 import com.ghanshyam.voguevibe.databinding.ActivityShoppingBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ShoppingActivity : AppCompatActivity() {
     val binding by lazy {
         ActivityShoppingBinding.inflate(layoutInflater)
