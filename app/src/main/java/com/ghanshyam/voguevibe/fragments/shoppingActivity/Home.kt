@@ -42,12 +42,14 @@ class Home : Fragment(R.layout.home_fragment) {
             BeautyCategoryFragment()
         )
 
+        binding.viewpager.isUserInputEnabled = false
+
         val viewPager2Adapter =
             HomeViewpagerAdapter(categoriesFragment, childFragmentManager, lifecycle)
         binding.viewpager.adapter = viewPager2Adapter
         TabLayoutMediator(binding.tabLayout, binding.viewpager) { tab, position ->
             when (position) {
-                0 -> tab.text = "Main"
+                0 -> tab.text = "Home"
                 1 -> tab.text = "Men"
                 2 -> tab.text = "Women"
                 3 -> tab.text = "Kids"
